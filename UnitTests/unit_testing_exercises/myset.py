@@ -8,7 +8,7 @@ class MySet:
         self.my_set = [self.add_item(items[b]) for b in range(0, len(items))]
 
         """Takes a list of items and builds a set with them, removing
-           duplicates if necessary.
+           duplicates if necessary..
         """
         pass
 
