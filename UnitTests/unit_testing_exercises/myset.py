@@ -2,8 +2,10 @@ class MySet:
 
     def __init__(self, items):
         self.my_set = []
-        for x in range(0, len(items)):
-            self.add_item(items[x])
+        #for x in range(0, len(items)):
+        #    self.add_item(items[x])
+
+        self.my_set = [self.add_item(items[b]) for b in range(0, len(items))]
 
         """Takes a list of items and builds a set with them, removing
            duplicates if necessary.
