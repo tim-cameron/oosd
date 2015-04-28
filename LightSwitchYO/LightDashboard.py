@@ -13,6 +13,19 @@ class DashApplication(QtGui.QMainWindow, Ui_MainWindow):
         QtGui.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
+        self.btnSwitch.clicked.connect(self.clicked)
+
+    def clicked(self):
+        palette = self.palette()
+        QtGui.QSound("switch.wav").play()
+        if self.rdoOn.isChecked():
+            self.rdoOff.setChecked(True)
+            palette.setColor(self.backgroundRole(),QtGui.QColor(0,0,0) )
+        else:
+            self.rdoOn.setChecked(True)
+            palette.setColor(self.backgroundRole(),QtGui.QColor(255,255,255) )
+        self.setPalette(palette)
+
 
 #THING IN THE MIDDLE
 
