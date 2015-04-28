@@ -37,4 +37,4 @@ class Weather(threading.Thread):
             else:
                 url = ''.join([MET_BASE, API_OPTIONS[key], self.city])
             print url
-            pprint.pprint(self.get_response(url))
+            pprint.pprint(self.get_response(url)) #
